@@ -42,6 +42,16 @@ body {
     position: relative;
 }
 
+.bottom {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    color: #363636; 
+}
+
 .profile-image {
     position: absolute;
     height: 100%;
@@ -49,4 +59,43 @@ body {
     left: 50%;
     transform: translate(-50%);
   
+}
+
+.name {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 26px;
+    z-index: 1;
+}
+
+.designation {
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 14px;
+    z-index: 1;
+}
+
+.btn {
+    padding-top: 4px;
+    position: absolute;
+    width: 105px;
+    height: 38px;
+    background: var(--gradient);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    z-index: 2;
+    transition: var(--long);
+
+}
+
+.btn-text {
+    height: 100px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    transition: var(--long);
 }
