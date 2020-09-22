@@ -31,4 +31,22 @@ body {
     height: 470px;
     background-color: #ffffff;
     border-radius: 25px;
+    display: grid;
+    grid-template-rows: auto 100px;
+    box-shadow: 0 20px 30px #000000;
+    overflow: hidden;
+}
+
+.image-box {
+    width: 300px;
+    position: relative;
+}
+
+.profile-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;;
+    left: 50%;
+    transform: translate(-50%);
+  
 }
