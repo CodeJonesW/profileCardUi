@@ -1,5 +1,5 @@
 :root {
-    --gradient: linear-gradient(90deg, #df54a7 0%, #7571ac 100%);
+    --gradient: linear-gradient(90deg, #739f1b 0%, #371717 100%);
     --long: 0.7s;
     --short: 0.2s;
 }
@@ -59,7 +59,7 @@ body {
     width: 100%;;
     left: 50%;
     transform: translate(-50%);
-  
+    transition: var(--long);
 }
 
 .name {
@@ -67,6 +67,7 @@ body {
     font-size: 26px;
     line-height: 26px;
     z-index: 1;
+    transition: var(--long)
 }
 
 .designation {
@@ -74,6 +75,7 @@ body {
     font-size: 18px;
     line-height: 14px;
     z-index: 1;
+    transition: var(--long)
 }
 
 .btn {
@@ -104,8 +106,8 @@ body {
 .social {
     padding: 20px;
     position: absolute;
-    background-color: #000000cc;
-    top: 0;
+    background-color: transparent;
+    top: -100%;
     left: 0;
     height: 100%;
     width: 100%;
@@ -113,8 +115,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 0;
     align-items: center;
+    z-index: 0;
+   transition: var(--long);
     
 }
 
@@ -159,12 +162,13 @@ a:hover {
     justify-content: center;
     align-items: center;
     transition: var(--short);
+    user-select: none;
 
 }
 
 .card.active .name,
 .card.active .designation {
-    transform: translate(-310px);
+    transform: translateY(-310px);
     color: #fff;
     
 
@@ -177,5 +181,18 @@ a:hover {
 
 .card.active .email {
     width: 200px;
-    background-color: #ffffff
+    background-color: #ffffff40
+}
+
+.card.active .profile-image {
+    height: 470px;
+}
+
+.card.active .btn-text {
+    transform: translateY(-50px);
+}
+
+.card.active .social {
+    top: 0;
+    background-color: #000000cc;
 }
